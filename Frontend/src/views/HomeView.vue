@@ -100,7 +100,7 @@ export default {
   methods: {
     async obtenerPiezas() {
       try {
-      const response = await axios.get('https://appbienesculturales-organizado-1.onrender.com/api/control_interno');
+      const response = await axios.get('https://bienesculturalesmuregro.onrender.com/api/control_interno');
       this.piezas = response.data;
       this.piezasFiltradas = response.data;
       console.log('✅ Piezas cargadas:');
@@ -145,7 +145,7 @@ export default {
         });
 
         const response = await axios.put(
-          `https://appbienesculturales-organizado-1.onrender.com/api/control_interno/${this.piezaSeleccionada._id}`,
+          `https://bienesculturalesmuregro.onrender.com/api/control_interno/${this.piezaSeleccionada._id}`,
           formData,
           { headers: { 'Content-Type': 'multipart/form-data' } }
         );
