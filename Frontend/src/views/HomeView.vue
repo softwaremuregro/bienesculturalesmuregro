@@ -6,7 +6,7 @@
       @input="filtrarPiezas"
       type="text"
       class="form-control mb-3"
-      placeholder="Buscar por nombre o número de control"
+      placeholder="Buscar por nombre o número de control o ubicacion"
     />
     <div class="row">
       <PiezaCard
@@ -114,6 +114,7 @@ export default {
       this.piezasFiltradas = this.piezas.filter(pieza =>
         pieza.nombre?.toLowerCase().includes(termino) ||
         pieza.numero_de_control?.toLowerCase().includes(termino)
+        || pieza.ubicacion?.toLowerCase().includes(termino)
       );
     },
     abrirModal(pieza) {
